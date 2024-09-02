@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Series!{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Series !</h1>
+        {% include('inc/nav.html.twig') %}
+    </header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    <footer>
+        {% include('inc/nav.html.twig') %}
+        <div>&copy; {{ "now"|date("Y") }} Series!</div>
+    </footer>
+</body>
+</html>
