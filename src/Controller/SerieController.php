@@ -93,7 +93,7 @@ class SerieController extends AbstractController
     #[Route('/delete/{id}', name: 'delete')]
     public function delete(int $id, EntityManagerInterface $entityManager): Response
     {
-        $entityManager->remove($id);
+        $entityManager->remove((object)$id);
         $entityManager->flush();
         return $this->redirectToRoute('main_home');
     }

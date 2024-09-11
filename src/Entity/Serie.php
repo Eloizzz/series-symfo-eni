@@ -62,7 +62,7 @@ class Serie
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateModified = null;
 
-    #[ORM\OneToMany(targetEntity: Season::class, mappedBy: 'serie', cascade: "remove")]
+    #[ORM\OneToMany(targetEntity: Season::class, mappedBy: 'serie', cascade: null)]
     private Collection $seasons;
 
     public function __construct()
